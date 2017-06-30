@@ -9,6 +9,8 @@ import { MenuComponent } from './restaurant-detail/menu/menu.component'
 
 import { ReviewComponent } from './restaurant-detail/review/review.component'
 
+import { OrderComponent } from './order/order.component'
+
 export const ROUTES: Routes = [
     { path:'', component: HomeComponent },
     { path:'about', component: AboutComponent },
@@ -21,5 +23,6 @@ export const ROUTES: Routes = [
             
         ]
     },
+    { path:'order', component: OrderComponent }
     
 ]
