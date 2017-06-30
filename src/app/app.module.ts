@@ -21,7 +21,8 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewComponent } from './restaurant-detail/review/review.component'
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
-import { OrderComponent } from './order/order.component'
+import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shared/input/input.component'
 
 
 
@@ -40,7 +41,8 @@ import { OrderComponent } from './order/order.component'
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
