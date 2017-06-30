@@ -13,7 +13,7 @@ export class ShoppingCartService{
     addItem(item: MenuItem){
         let foundItem = this.items.find((mItem)=> mItem.menuItem.id === item.id) //se os id são iguais
         if(foundItem){
-            foundItem.quantity = foundItem.quantity + 1
+            this.increaseQuantity(foundItem)
         }else{
             this.items.push(new CartItem(item)) //adiciona no carrinho
         }
@@ -27,5 +27,16 @@ export class ShoppingCartService{
         return this.items
                 .map(item => item.value()) //pega o valor do item
                 .reduce((prev,value) => prev + value, 0) //soma os dois valores
+    }
+
+    increaseQuantity(item: CartItem){
+        item.quantity = item.quantity + 1
+    }
+
+    decreaseQuantity(item: CartItem){
+        item.quantity = item.quantity - 1
+        if(item.quantity === 0 ){ //se quantidade chegar a ser igual a 0
+            this.removeItem(item)
+        }
     }
 }
