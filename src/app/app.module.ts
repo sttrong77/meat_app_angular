@@ -23,7 +23,8 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewComponent } from './restaurant-detail/review/review.component'
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
-import { SharedModule } from './shared/shared.module'
+import { SharedModule } from './shared/shared.module';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 
 
@@ -42,6 +43,7 @@ import { SharedModule } from './shared/shared.module'
     MenuItemComponent,
     ReviewComponent,
     OrderSummaryComponent,
+    NotFoundComponent,
 
   ],
   imports: [
